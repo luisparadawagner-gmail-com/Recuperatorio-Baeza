@@ -1,1 +1,48 @@
-<p>comprar works!</p>
+<p>Formulario de Reserva</p>
+
+
+<form [formGroup]='inscripcionForm'>
+<div class="datosDelViajero">
+    
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+            <input matInput type="text" formControlName="nombre">          
+    </mat-form-field>
+    
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Apellido</mat-label>
+            <input matInput type="text" formControlName="apellido">          
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Edad</mat-label>
+            <input matInput type="int" formControlName="edad">
+    </mat-form-field>
+    <br>
+
+      <mat-form-field appearance="outline">
+        <mat-label >Elija un destino</mat-label>
+        <mat-select formControlName="destino">
+          <mat-option value="Italia">Italia</mat-option>
+          <mat-option value="Francia">Francia</mat-option>
+          <mat-option value="Noruega">Noruega</mat-option>
+          
+        </mat-select>
+      </mat-form-field>
+
+      
+
+     
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Año del viaje</mat-label>
+            <input matInput type="int" formControlName="anio">
+    </mat-form-field>
+    <br>
+
+    <button mat-raised-button (click)="cargarDatos()">Cargar Datos</button>
+        
+</div> 
+
+</form>
